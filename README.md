@@ -30,24 +30,24 @@ Power BI Dashboard Visualization
 
 # Tech Stack
 1)Programming & Data Processing
-Python
-Pandas
-NumPy
-Machine Learning
-Scikit-learn
+Python,
+Pandas,
+NumPy,
+Machine Learning,
+Scikit-learn,
 Random Forest Classifier
 
 2)Data Extraction
-SQL Server
+SQL Server,
 SQL queries for data preparation
 
 3)Vsualization
 Power BI
 
 4)Tools
-VS Code
-Git
-GitHub
+VS Code,
+Git,
+GitHub,
 Jupyter Notebook
 
 
