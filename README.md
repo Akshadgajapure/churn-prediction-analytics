@@ -1,68 +1,71 @@
 # 📊 Customer Churn Prediction & Analytics
 
-An end-to-end **Customer Churn Prediction and Business Intelligence** project that combines **SQL, Python Machine Learning, and Power BI** to analyze customer behavior, identify churn drivers, and predict customers at risk of leaving.
-
-The project demonstrates how data analytics and machine learning can help telecom and subscription-based businesses reduce customer churn through data-driven decision making.
+An end-to-end Customer Churn Prediction project that combines **SQL**, **Python**, **Machine Learning**, and **Power BI** to analyze customer behavior, predict customer churn, and provide actionable business insights.
 
 ---
 
-## 📌 Project Objective
+## 🚀 Project Overview
 
-Customer churn is one of the biggest challenges for subscription-based businesses. Retaining existing customers is significantly more cost-effective than acquiring new ones.
+Customer churn is a major challenge for subscription-based businesses. Losing existing customers reduces revenue and increases acquisition costs.
 
-This project aims to:
-
-- Analyze customer behavior and churn patterns
-- Identify key factors influencing customer churn
-- Build a Machine Learning model to predict churn
-- Visualize business insights using interactive Power BI dashboards
-- Identify customers at high risk for targeted retention campaigns
+This project demonstrates how data analytics and machine learning can help businesses identify customers likely to churn and support proactive retention strategies.
 
 ---
 
-## 🏗️ Project Architecture
+## 🎯 Objectives
+
+- Analyze historical customer churn patterns
+- Identify important churn drivers
+- Build a Random Forest model to predict churn
+- Visualize business insights using Power BI
+- Identify customers at risk of leaving
+
+---
+
+# 🏗️ Project Workflow
 
 ```
-                Raw Customer Data
-                       │
-                       ▼
-          SQL Data Extraction & Cleaning
-                       │
-                       ▼
-        Data Preprocessing (Python)
-                       │
-                       ▼
-             Feature Engineering
-                       │
-                       ▼
-      Random Forest Classification Model
-                       │
-                       ▼
-            Model Performance Evaluation
-                       │
-                       ▼
-             Churn Probability Prediction
-                       │
-                       ▼
-          Power BI Business Dashboards
+Customer Data
+      │
+      ▼
+SQL Data Cleaning & Extraction
+      │
+      ▼
+Python Data Preprocessing
+      │
+      ▼
+Feature Engineering
+      │
+      ▼
+Random Forest Model
+      │
+      ▼
+Model Evaluation
+      │
+      ▼
+Customer Churn Prediction
+      │
+      ▼
+Power BI Dashboard
 ```
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
-### Programming & Machine Learning
+### Programming
 - Python
 - Pandas
 - NumPy
+
+### Machine Learning
 - Scikit-learn
 - Random Forest Classifier
 
 ### Database
 - SQL Server
-- SQL Queries
 
-### Business Intelligence
+### Visualization
 - Power BI
 
 ### Development Tools
@@ -73,118 +76,78 @@ This project aims to:
 
 ---
 
-## 📂 Project Structure
+# 📂 Repository Structure
 
 ```
-Customer-Churn-Prediction/
-│
-├── Data/
-│   ├── raw_data.csv
-│   └── cleaned_data.csv
-│
-├── SQL/
-│   └── data_extraction.sql
-│
-├── notebooks/
-│   ├── Data_Preprocessing.ipynb
-│   ├── Model_Training.ipynb
-│   └── Model_Evaluation.ipynb
-│
-├── PowerBI/
-│   └── Customer_Churn_Dashboard.pbix
-│
-├── Images/
-│   ├── dashboard1.png
-│   └── dashboard2.png
-│
-├── model.pkl
-│
-├── requirements.txt
-│
+├── Customer_Data.csv
+├── Predictions.csv
+├── main.ipynb
+├── sql_queries.sql
+├── Churn Analysis.pbix
+├── preprocessing_artifacts.pkl
+├── preprocessing_visualization.png
 └── README.md
 ```
 
 ---
 
-# 🔄 Machine Learning Pipeline
+# 🤖 Machine Learning Pipeline
 
-## 1. Data Preprocessing
+### Data Preprocessing
 
 - Missing value handling
-- Duplicate removal
 - Data cleaning
 - Feature transformation
-- Encoding categorical variables
+- Label Encoding
+- One-Hot Encoding
 
 ---
 
-## 2. Feature Engineering
+### Feature Engineering
 
-The model uses several customer attributes, including:
+Features used include:
 
-- Customer demographics
+- Gender
+- Senior Citizen
+- Partner
+- Dependents
 - Tenure
-- Internet service
-- Contract type
-- Payment method
-- Monthly charges
-- Total charges
-- Online security
-- Tech support
-- Streaming services
+- Internet Service
+- Contract Type
+- Payment Method
+- Monthly Charges
+- Total Charges
+- Online Security
+- Streaming Services
 
 ---
 
-## 3. Model Training
+### Model Training
 
 A **Random Forest Classifier** was trained to classify customers into:
 
 - Churn
-- Non-Churn
-
-Random Forest was selected because it:
-
-- Handles mixed feature types
-- Reduces overfitting
-- Provides high predictive accuracy
-- Captures non-linear relationships
+- No Churn
 
 ---
 
-## 4. Model Evaluation
+### Model Evaluation
 
-The model was evaluated using:
+Performance was evaluated using:
 
-- Accuracy
+- Confusion Matrix
 - Precision
 - Recall
 - F1 Score
 - ROC-AUC Score
-- Confusion Matrix
 
-### Model Performance
-
-| Metric | Score |
-|---------|--------|
-| Accuracy | 85% |
-| Precision | 80% |
-| Recall | 76% |
-| F1 Score | 78% |
-| ROC-AUC | **0.916** |
-
-*(Update the metrics according to your final results if different.)*
+**ROC-AUC Score:** **0.916**
 
 ---
 
-# 📈 Power BI Dashboards
+# 📈 Power BI Dashboard
 
-The project includes two interactive dashboards.
-
----
-
-## Dashboard 1 – Customer Churn Analysis
-
-Provides an overview of historical churn patterns.
+The dashboard provides interactive business insights through:
 
 ### Key KPIs
 
@@ -202,132 +165,106 @@ Provides an overview of historical churn patterns.
 - Churn by Payment Method
 - Churn by Contract Type
 - Churn by Tenure
-- Churn by Services Used
+- Churn by Services
 
-This dashboard helps identify the primary drivers behind customer churn.
+### Prediction Dashboard
 
----
-
-## Dashboard 2 – Customer Churn Prediction
-
-Displays customers predicted to churn using the trained machine learning model.
-
-### Key Insights
-
-- Predicted Churn Profile
-- State-wise Risk Distribution
-- Age Group Analysis
-- Contract Type Analysis
-- Customer Risk Segmentation
-
-### Customer At Risk Table
-
-A dedicated table lists customers with a high probability of churn, enabling businesses to take proactive retention actions.
+- State-wise churn prediction
+- Risk segmentation
+- Customer profile analysis
+- Customers at Risk table
 
 ---
 
-# 💡 Business Insights
+# 📊 Business Insights
 
-The analysis revealed several important findings:
-
-- Customers with **Month-to-Month contracts** exhibit the highest churn rate.
-- **Fiber Optic Internet** users are more likely to churn than DSL users.
-- Customers with **short tenure** are at greater risk of leaving.
-- Certain states have significantly higher churn concentrations.
-- Customers lacking services such as **Online Security** and **Tech Support** tend to churn more frequently.
-
-These insights can support targeted marketing campaigns and customer retention strategies.
+- Customers with **Month-to-Month** contracts show the highest churn.
+- Customers using **Fiber Optic Internet** have a higher churn rate.
+- Customers with shorter tenure are more likely to leave.
+- Lack of Online Security and Tech Support is associated with increased churn.
+- Certain states exhibit higher churn concentrations.
 
 ---
 
-# 📊 Business Impact
+# 📈 Results
 
-The project enables organizations to:
+| Metric | Score |
+|---------|-------|
+| ROC-AUC | **0.916** |
 
-- Reduce customer churn
-- Improve customer retention
+---
+
+# 💼 Business Impact
+
+This project enables businesses to:
+
+- Predict churn before customers leave
+- Improve retention strategies
 - Identify high-risk customers
-- Optimize marketing campaigns
-- Increase customer lifetime value
-- Support data-driven business decisions
+- Reduce revenue loss
+- Support data-driven decision making
 
 ---
 
 # 🚀 Future Improvements
 
-Potential enhancements include:
-
 - Hyperparameter tuning
-- XGBoost and LightGBM implementation
-- Model deployment using Streamlit or Flask
-- Real-time churn prediction API
-- Automated model retraining pipeline
-- Explainable AI using SHAP values
-- Customer retention recommendation engine
+- XGBoost implementation
+- SHAP Explainability
+- Streamlit deployment
+- REST API using Flask/FastAPI
+- Automated retraining pipeline
 
 ---
 
-# ▶️ How to Run
+# ▶️ Installation
 
-### Clone the repository
+Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/customer-churn-prediction.git
+git clone https://github.com/Akshadgajapure/churn-prediction-analytics.git
 ```
 
-### Install dependencies
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run Jupyter Notebook
+Run the notebook
 
 ```bash
 jupyter notebook
 ```
 
-### Open Power BI Dashboard
-
-Open the `.pbix` file using **Microsoft Power BI Desktop**.
+Open the Power BI dashboard using **Power BI Desktop**.
 
 ---
 
-# 📸 Dashboard Preview
+# 📷 Dashboard Preview
 
-## Churn Analysis Dashboard
+> Add screenshots of your Power BI dashboards here.
 
-> *(Add screenshot here)*
+```markdown
+![Dashboard](images/dashboard1.png)
 
-```
-Images/dashboard1.png
-```
-
----
-
-## Churn Prediction Dashboard
-
-> *(Add screenshot here)*
-
-```
-Images/dashboard2.png
+![Prediction Dashboard](images/dashboard2.png)
 ```
 
 ---
 
-# 📚 Skills Demonstrated
+# 🧠 Skills Demonstrated
 
 - SQL
 - Python
 - Data Cleaning
-- Exploratory Data Analysis (EDA)
+- Exploratory Data Analysis
 - Feature Engineering
 - Machine Learning
-- Random Forest Classification
-- Model Evaluation
+- Random Forest
 - Power BI
-- Data Visualization
 - Business Intelligence
+- Data Visualization
 
 ---
 
@@ -337,14 +274,8 @@ Images/dashboard2.png
 
 Chemical Engineering Undergraduate | NIT Raipur
 
-Interested in:
-- Data Analytics
-- Machine Learning
-- Business Intelligence
-- Artificial Intelligence
-
-GitHub: https://github.com/Akshadgajapure
+- GitHub: https://github.com/Akshadgajapure
 
 ---
 
-## ⭐ If you found this project helpful, consider giving it a star!
+⭐ If you found this project useful, consider starring the repository.
